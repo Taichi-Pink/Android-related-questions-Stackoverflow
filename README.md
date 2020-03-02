@@ -1,6 +1,7 @@
-This is the implementation for Deep Reformulated Laplacian Tone Mapping. And code here is a replicate by Keras of [our previous code by Tensorflow](https://github.com/linmc86/Deep-Reformulated-Laplacian-Tone-Mapping).
+This is the implementation for displaying the titles of the extracted questions from StackOverflow
+.
 
-# Deep-Reformulated-Laplacian-Tone-Mapping-Keras
+# Android-related-questions-Stackoverflow
 
 
 ## Introduction
