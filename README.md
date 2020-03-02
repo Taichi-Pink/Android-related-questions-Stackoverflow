@@ -1,5 +1,4 @@
-This is the implementation for displaying the titles of the extracted questions from StackOverflow
-.
+This is the implementation for displaying the titles of the extracted questions from StackOverflow.
 
 # Android-related-questions-Stackoverflow
 
