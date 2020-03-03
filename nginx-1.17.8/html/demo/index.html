@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>stack overflow</title>
+    <script type="text/javascript" src="ten_newest_question.json"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        eel.expose(print_q);
+        function print_q(){
+        const tag = document.getElementById('tags').value
+        eel.ten_newest_question(tag);
+        eel.ten_voted_question(tag);
+        }
+        eel.print_q()
+    </script>
+    <script type = "text/javascript" >
+     $(function() {
+        getAir();
+
+        function getAir() {
+
+            $.ajax({
+                type: "get",
+                url: "json/ten_newest_question.json",
+                dataType: "json",
+                success: function(res) {
+                    var result = res.items;
+                    var html;
+                    var i;
+                    for(var i = 0; i < result.length; i++) {
+                    html += '<tr>' +
+                                '<td><a href='+result[i].link+'>'+result[i].title+'</a></td>' +
+                                '<td>' + result[i].score + '</td>' +
+                                '<td>' + result[i].answer_count + '</td>' +
+                                '</tr>';
+                    ;
+
+                    }
+                    document.getElementById("customers").innerHTML += html;
+                }
+            });
+        }
+    });
+    $(function() {
+        getAir();
+
+        function getAir() {
+
+            $.ajax({
+                type: "get",
+                url: "json/ten_voted_question.json",
+                dataType: "json",
+                success: function(res) {
+                    var result = res.items;
+                    var html;
+                    var i;
+                    for(var i = 0; i < result.length; i++) {
+                    html += '<tr>' +
+                                '<td><a href='+result[i].link+'>'+result[i].title+'</a></td>' +
+                                '<td>' + result[i].score + '</td>' +
+                                '<td>' + result[i].answer_count + '</td>' +
+                                '</tr>';
+                    ;
+
+                    }
+                    document.getElementById("customers0").innerHTML += html;
+                }
+            });
+        }
+    });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+
+    .header {
+      padding: 60px;
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      background-color: #333;
+      color: white;
+      flex-direction: row-reverse;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .side {
+      flex: 30%;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    .main {
+      flex: 70%;
+      background-color: white;
+      padding: 20px;
+    }
+
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+    .data_box {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+    }
+
+    .nav-left {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    font-size: 12px;
+    }
+
+     .formbox {
+            display:-webkit-flex;
+            display: flex;
+            justify-content: center;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            align-items: stretch;
+            align-content: center;
+            height:30px;
+        }
+
+     .input-text1{
+        order:0;
+        flex-shrink:1;
+        flex-basis:auto;
+        flex:3 1 auto;
+        align-self:center;
+        border: 1px solid #3BADC9;
+        border-right: none;
+        border-radius: 5px 0px 0px 5px;
+        height: 30px;
+        background: #fff;
+     }
+
+     .btn{
+        background: #3BADC9;
+        border: 1px solid #3BADC9;
+        color: #fff;
+        border-radius: 0px 5px 5px 0px;
+        font-size: 1rem;
+        flex:2;
+     }
+
+    @media screen and (max-width: 700px) {
+      .row, .navbar {
+        flex-direction: column;
+      }
+    }
+
+    #customers {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #customers0 {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers0 td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #customers0 tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers0 tr:hover {background-color: #ddd;}
+
+    #customers0 th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    </style>
+</head>
+<body>
+
+
+<!-- Header -->
+<div class="header">
+  <h1>Android-related questions Stackoverflow</h1>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div id="app" v-cloak>
+        <form action="" class="formbox">
+            <input id="tags" type="text" class="input-text1">
+            <button onclick="print_q()" class="btn">Search</button>
+        </form>
+    </div>
+
+<p>Input tag:</p>
+</div>
+
+
+<!-- The flexible content -->
+<div class="row">
+    <div class="main">
+    <h2>10 Newest</h2>
+    <table id="customers">
+          <tr>
+            <th>Title</th>
+            <th>Score</th>
+            <th>Answered</th>
+          </tr>
+    </table>
+        <h2>10 Most Voted</h2>
+    <table id="customers0">
+          <tr>
+            <th>Title</th>
+            <th>Score</th>
+            <th>Answered</th>
+          </tr>
+    </table>
+    <br>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+   <small>&copy; 2020 <a href="https://github.com/Taichi-Pink/Android-related-questions-Stackoverflow">Taichi</a></small>
+</div>
+
+</body>
+</html>
