@@ -5,6 +5,8 @@ This is the implementation for displaying the titles of the extracted questions 
 
 ## Introduction
 <img src="Display_image.png" width="800"> 
+
+
 This website is used for extracting topic-related questions from [StackOverflow](https://stackoverflow.com/). 
 After submitted your interesting topic through the search bar on the upper-right corner, this website would extract from [StackOverflow](https://stackoverflow.com/)
 the ```10 newest topic-related questions```, as well as the ```10 most voted topic-related questions``` that are created ```in the past week```.
