@@ -4,9 +4,7 @@ This is the implementation for displaying the titles of the extracted questions 
 
 
 ## Introduction
-<img src="https://raw.githubusercontent.com/PinkLoveyi/Deep-Reformulated-Laplacian-Tone-Mapping-Keras/master/result/9C4A1511-702551eb64_predict.jpg" width="430"> <img src="https://raw.githubusercontent.com/PinkLoveyi/Deep-Reformulated-Laplacian-Tone-Mapping-Keras/master/result/9C4A0221-feaaa06d6f_predict.jpg" width="430">
-
-<img src="https://raw.githubusercontent.com/PinkLoveyi/Deep-Reformulated-Laplacian-Tone-Mapping-Keras/master/result/9C4A3782-70b3083cee_predict.jpg" width="430"> <img src="https://raw.githubusercontent.com/PinkLoveyi/Deep-Reformulated-Laplacian-Tone-Mapping-Keras/master/result/9C4A4301-9fd6373e60_predict.jpg" width="430">
+<img src="Display_image.png" width="800"> 
 This website is used for extracting topic-related questions from [StackOverflow](https://stackoverflow.com/). 
 After submitted your interesting topic through the search bar on the upper-right corner, this website would extract from [StackOverflow](https://stackoverflow.com/)
 the ```10 newest topic-related questions```, as well as the ```10 most voted topic-related questions``` that are created ```in the past week```.
