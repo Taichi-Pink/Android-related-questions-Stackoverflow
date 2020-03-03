@@ -19,10 +19,8 @@ the ```10 newest topic-related questions```, as well as the ```10 most voted top
 3. In the virtual environment under the same panel, install the following dependencies:
 
  - eel v 0.12.2
- - json5 v 0.8.5
  - requests v 2.21.0
- - jinja2 v 2.11.1
-
+ 
 
 #### Process
 * Open the `/Android-related-questions-Stackoverflow/Web.py` file.
