@@ -14,7 +14,7 @@ the ```10 newest topic-related questions```, as well as the ```10 most voted top
 
 ## Instructions
 ### Pycharm setup 
-1. Download [Pyacharm 2019](https://www.jetbrains.com/pycharm/download/#section=linux). Go to `File` -> `Open` and choose the project where it's downloaded.
+1. Download [Pyacharm 2019](https://www.jetbrains.com/pycharm/download/#section=linux)([you could follow this video](https://www.youtube.com/watch?v=YxHplztMQMc)). Go to `File` -> `Open` and choose the project where it's downloaded.
 2. Go to `File` -> `Settings`.  In the prompt window, select `Project:Android-related-questions-Stackoverflow` -> `Project Interpreter` on the left panel. At the top of the right panel,  click the `gear` icon to add a Python Interpreter with environment `Python 3.7`.
 3. In the virtual environment under the same panel, install the following dependencies:
 
